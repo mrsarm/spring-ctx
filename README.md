@@ -86,7 +86,7 @@ of your project:
    <dependency>
        <groupId>com.github.mrsarm</groupId>
        <artifactId>spring-ctx</artifactId>
-       <version>1.0.0-SNAPSHOT</version>
+       <version>1.0.0-RC1</version>
    </dependency>
    ```
 
@@ -108,7 +108,7 @@ of your project:
 1. `dependencies` section:
 
    ```groovy
-   implementation 'com.github.mrsarm:spring-ctx:1.0.0-SNAPSHOT'
+   implementation 'com.github.mrsarm:spring-ctx:1.0.0-RC1'
    ```
 
 2. `repositories` section:

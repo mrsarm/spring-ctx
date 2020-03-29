@@ -1,10 +1,11 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.8.4'
 }
 
 group 'com.github.mrsarm'
-version '1.0.0-SNAPSHOT'
+version '1.0.0-RC1'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -29,6 +30,32 @@ publishing {
         mavenJava(MavenPublication) {
             artifactId = 'spring-ctx'
             from components.java
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key  = System.getenv('BINTRAY_KEY')
+
+    publications = ['mavenJava']
+    //configurations = ['archives']
+
+    pkg {
+        repo = 'public'
+        name = 'spring-ctx'
+        userOrg = 'mrsarm'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/mrsarm/spring-ctx.git'
+
+        githubRepo = 'mrsarm/spring-ctx'
+        githubReleaseNotesFile = 'README.md'
+
+        version {
+            name = project.version
+            //desc = ""
+            released  = new Date()
+            vcsTag = project.version
         }
     }
 }

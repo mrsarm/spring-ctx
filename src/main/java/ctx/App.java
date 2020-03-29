@@ -11,13 +11,12 @@ import org.springframework.core.env.Environment;
 
 
 /**
- * Exposes the Spring context statically.
+ * <p>Exposes the Spring context statically.</p>
  *
- * You can get a bean object from the context like the following, without the
- * need to inject the bean into your class:
+ * <p>You can get a bean object from the context like the following, without the
+ * need to inject the bean into your class:</p>
  *
  * <pre>
- *
  *     // Get a business object by name or class
  *     MyUserService myUserService = ctx.App.getBean(MyUserService.class);
  *
@@ -35,7 +34,6 @@ import org.springframework.core.env.Environment;
  *      "lastName" : "Due",
  *      "age" : null
  *    }
- *
  * </pre>
  */
 public class App implements ApplicationContextAware {
