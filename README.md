@@ -24,8 +24,8 @@ To do so, you need to start first a jshell console, start running
 your application, and then use the `ctx.App` class to access your
 bean objects.
 
-> :information_source: Take a look to [spring-ctx](https://github.com/mrsarm/spring-ctx)
-> for the same class but implemented in Groovy.
+> :information_source: Take a look to [spring-ctx-groovy](https://github.com/grayshirts/spring-ctx-groovy)
+> for the same class but implemented in Groovy (not exactly the same class though).
 
 Also exposes the properties of the project with the `prop` static method:
 
@@ -66,14 +66,14 @@ You can also access to the the Spring context with `ctx.App.getContext()`, it
 returns a [ApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
 instance, but the `App` class provides enough static methods to get
 the bean objects, configuration properties, access the object mapper
-and the current environment (profiles) active.
+and the current environment active (profiles).
 
 
 Configuration
 -------------
 
 To add this library to your project, depending of your building
-tool, these are the configuration settings needed:
+tool, these are the settings needed:
 
 ### Maven
 
