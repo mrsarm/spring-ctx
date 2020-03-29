@@ -75,6 +75,23 @@ Configuration
 To add this library to your project, depending of your building
 tool, these are the settings needed:
 
+### Gradle
+
+Add the following configuration to the `build.gradle` file
+of your project:
+
+1. `dependencies` section:
+
+   ```groovy
+   implementation 'com.github.mrsarm:spring-ctx:1.0.0-RC1'
+   ```
+
+2. And at the end of `repositories` section:
+
+   ```groovy
+   maven { url 'https://jitpack.io' }
+   ```
+
 ### Maven
 
 Add the following configuration to the `pom.xml` file
@@ -90,33 +107,13 @@ of your project:
    </dependency>
    ```
 
-2. `repositories` section:
+2. And at the end of `repositories` section:
 
    ```xml
    <repository>
-       <id>mrsarm-public</id>
-       <name>mrsarm public repository</name>
-       <url>https://dl.bintray.com/mrsarm/public</url>
+       <id>jitpack.io</id>
+       <url>https://jitpack.io</url>
    </repository>
-   ```
-
-### Gradle
-
-Add the following configuration to the `build.gradle` file
-of your project:
-
-1. `dependencies` section:
-
-   ```groovy
-   implementation 'com.github.mrsarm:spring-ctx:1.0.0-RC1'
-   ```
-
-2. `repositories` section:
-
-   ```groovy
-   maven() {
-       url "https://dl.bintray.com/mrsarm/public"
-   }
    ```
 
 
@@ -141,19 +138,15 @@ Publish to your local Maven repo:
 $ ./gradlew publishToMavenLocal
 ```
 
-Upload to Bintray repo:
-
-```bash
-$ ./gradlew bintrayUpload
-```
+Publish to [JitPack](https://jitpack.io/): just release
+a new tag in the repository, and _JitPack_ will do
+the magic !!
 
 
 About
 -----
 
 Project: https://github.com/mrsarm/spring-ctx
-
-Bintray Artifacts Repository: https://bintray.com/mrsarm/public/spring-ctx
 
 Author: Mariano Ruiz <mrsarm@gmail.com>
 
