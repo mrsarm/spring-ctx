@@ -1,0 +1,34 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'com.github.mrsarm'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-context-support:4.2.4.RELEASE'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'spring-ctx'
+            from components.java
+        }
+    }
+}
