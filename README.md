@@ -1,8 +1,6 @@
 Spring Context
 ==============
 
-> :warning: Work in progress, NOT published yet.
-
 `spring-ctx` contains the Java class `ctx.App`, that
 exposes the Spring context statically.
 
@@ -83,10 +81,10 @@ of your project:
 1. `dependencies` section:
 
    ```groovy
-   implementation 'com.github.mrsarm:spring-ctx:1.0.0-RC1'
+   implementation 'com.github.mrsarm:spring-ctx:1.0.0'
    ```
 
-2. And at the end of `repositories` section:
+2. And at the end of the `repositories` section:
 
    ```groovy
    maven { url 'https://jitpack.io' }
@@ -103,11 +101,11 @@ of your project:
    <dependency>
        <groupId>com.github.mrsarm</groupId>
        <artifactId>spring-ctx</artifactId>
-       <version>1.0.0-RC1</version>
+       <version>1.0.0</version>
    </dependency>
    ```
 
-2. And at the end of `repositories` section:
+2. And at the end of the `repositories` section:
 
    ```xml
    <repository>
@@ -138,8 +136,8 @@ Publish to your local Maven repo:
 $ ./gradlew publishToMavenLocal
 ```
 
-Publish to [JitPack](https://jitpack.io/): just release
-a new tag in the repository, and _JitPack_ will do
+Publish to the [JitPack](https://jitpack.io/) public repository:
+just release a new tag in the repository, and _JitPack_ will do
 the magic !!
 
 
