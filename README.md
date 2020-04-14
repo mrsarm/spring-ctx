@@ -66,7 +66,8 @@ instance, but the `App` class provides enough static methods to get
 the bean objects, configuration properties, access the object mapper
 and the current environment (active profiles).
 
-Check the javadoc for more usage details: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
+Check the **javadoc** for more usage details:
+https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
 
 
 Configuration
@@ -146,10 +147,10 @@ the magic !!
 About
 -----
 
-Project: https://github.com/mrsarm/spring-ctx
+**Project**: https://github.com/mrsarm/spring-ctx
 
-Javadoc: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
+**Javadoc**: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
 
-Author: Mariano Ruiz <mrsarm@gmail.com>
+**Author**: Mariano Ruiz <mrsarm@gmail.com>
 
-License: [Apache Software License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+**License**: [Apache Software License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
