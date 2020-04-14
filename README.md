@@ -64,7 +64,9 @@ You can also access to the the Spring context with `ctx.App.getContext()`, it
 returns a [ApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
 instance, but the `App` class provides enough static methods to get
 the bean objects, configuration properties, access the object mapper
-and the current environment active (profiles).
+and the current environment (active profiles).
+
+Check the javadoc for more usage details: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
 
 
 Configuration
@@ -145,6 +147,8 @@ About
 -----
 
 Project: https://github.com/mrsarm/spring-ctx
+
+Javadoc: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
 
 Author: Mariano Ruiz <mrsarm@gmail.com>
 
