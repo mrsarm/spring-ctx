@@ -4,8 +4,8 @@ Spring Context
 `spring-ctx` contains the Java class `ctx.App`, that
 exposes the Spring context statically.
 
-You can get a bean object from the context like this in **Java**, without the
-need to inject the bean into your class:
+You can get a bean object from the context like the following in **Java**,
+without the need to inject it into your class:
 
 ```java
 MyUserService myUserService = ctx.App.getBean(MyUserService.class);
@@ -15,17 +15,23 @@ But the most important feature is to use it with the
 [jshell](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm) tool
 included in Java 9+ distributions, to access within the console
 to the Spring context, and therefore all the business objects created with it,
-like many other frameworks allows to do, eg. the *Grails Console* in Groovy + Grails,
+like many other frameworks allow to do, eg. the *Grails Console* in Groovy + Grails,
 the *Django Admin Shell* in Python + Django, and the *Rails Console* in Ruby + RoR.
 
-To do so, you need to start first a jshell console, start running
+To do so, you need to start first a `jshell` console, start running
 your application, and then use the `ctx.App` class to access your
 bean objects.
+
+Do you need to start the Jshell with all your deps in the classpath?
+checkout the [jshell-plugin](https://github.com/mrsarm/jshell-plugin) project, it
+has a special section that explains how to set up the plugin and
+this library to play with Spring:
+[jshell-plugin - Spring Boot applications](https://github.com/mrsarm/jshell-plugin#spring-boot-applications)
 
 > :information_source: Take a look to [spring-ctx-groovy](https://github.com/grayshirts/spring-ctx-groovy)
 > for the same class but implemented in Groovy (not exactly the same class though).
 
-Also exposes the properties of the project with the `prop` static method:
+The `ctx.App` class also exposes the properties of the project with the `prop` static method:
 
 ```bash
 jshell> ctx.App.getProp("server.context-path")
@@ -60,20 +66,20 @@ jshell> ctx.App.ppjson(person)
 }
 ```
 
-You can also access to the the Spring context with `ctx.App.getContext()`, it
+You can also access to the Spring context with `ctx.App.getContext()`, it
 returns a [ApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
 instance, but the `App` class provides enough static methods to get
 the bean objects, configuration properties, access the object mapper
 and the current environment (active profiles).
 
-Check the **javadoc** for more usage details:
+:blue_book: Check the **javadoc** for more usage details:
 https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
 
 
-Configuration
--------------
+:hammer: Configuration
+----------------------
 
-To add this library to your project, depending of your building
+To add the library to your project, depending on your building
 tool, these are the settings needed:
 
 ### Gradle
@@ -87,7 +93,7 @@ of your project:
    implementation 'com.github.mrsarm:spring-ctx:1.0.0'
    ```
 
-2. And at the end of the `repositories` section:
+2. At the end of the `repositories` section:
 
    ```groovy
    maven { url 'https://jitpack.io' }
@@ -108,7 +114,7 @@ of your project:
    </dependency>
    ```
 
-2. And at the end of the `repositories` section:
+2. At the end of the `repositories` section:
 
    ```xml
    <repository>
@@ -149,7 +155,7 @@ About
 
 **Project**: https://github.com/mrsarm/spring-ctx
 
-**Javadoc**: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
+:blue_book: **Javadoc**: https://mrsarm.github.io/spring-ctx/1.0/javadoc/index.html
 
 **Author**: Mariano Ruiz <mrsarm@gmail.com>
 
